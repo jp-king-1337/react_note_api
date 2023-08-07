@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "server:dev": "cd ./server && npm run dev",
-        "browser:dev": "cd ./browser && npm run start",
+        "browser:dev": "cd ./browser && npm start",
         "dev": "concurrently \"npm run server:dev\" \"npm run browser:dev\""
     },
     "repository": {
