@@ -1,0 +1,25 @@
+{
+    "name": "react_note_api",
+    "version": "1.0.0",
+    "description": "Second take",
+    "main": "index.js",
+    "scripts": {
+        "server:dev": "cd ./server && npm run dev",
+        "browser:dev": "cd ./browser && npm run dev",
+        "dev": "npm run server:dev && npm run browser:dev"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jp-king-1337/react_note_api.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jp-king-1337/react_note_api/issues"
+    },
+    "homepage": "https://github.com/jp-king-1337/react_note_api#readme",
+    "devDependencies": {
+        "concurrently": "^8.2.0"
+    }
+}
