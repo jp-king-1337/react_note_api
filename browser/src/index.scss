@@ -9,6 +9,15 @@ body,
     height: 100%;
 }
 
+// https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff
+:root {
+    --custBlack: #000;
+    --custBlue: #14213d;
+    --custOrange: #fca311;
+    --custLightGray: #e5e5e5;
+    --custWhite: #fff;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -29,6 +38,10 @@ body {
 
 .justify-between {
     justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
 }
 
 .align-center {
@@ -77,8 +90,28 @@ main {
 }
 
 .landing {
+
     h1,
     h3 {
         margin-bottom: 25px;
+    }
+}
+
+form {
+    width: 400px;
+    margin: 20px auto 0;
+
+    input,
+    button {
+        padding: 5px 10px;
+        margin-bottom: 5px;
+    }
+
+    button {
+        border: none;
+        padding: 8px 10px;
+        font-size: .98rem;
+        background: var(--custOrange);
+        color: var(--custWhite);
     }
 }
