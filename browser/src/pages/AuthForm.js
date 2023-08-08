@@ -8,7 +8,9 @@ function AuthForm(props) {
                 <button>Submit</button>
                 <div className="toggle-wrap">
                     <label htmlFor="login">Login</label>
-                    <input type="radio" id="login" value="login" />
+                    <input type="radio" id="login" value="login" checked={true}/>
+                    <label htmlFor="register">Register</label>
+                    <input type="radio" id="register" value="register" checked={false}/>
                 </div>
             </form>
         </>
