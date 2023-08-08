@@ -18,7 +18,7 @@ function AuthForm(props) {
                 <input type="email" placeholder="Enter your email" />
                 <input type="password" placeholder="Enter your password" />
                 <button>Submit</button>
-                <div className="toggle-wrap">
+                <div className="toggle-wrap" styles={styles.toggleWrap}>
                     <label htmlFor="login">Login</label>
                     <input type="radio" id="login" value="login" checked={true}/>
                     <label htmlFor="register">Register</label>
