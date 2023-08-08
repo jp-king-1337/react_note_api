@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const styles = {
     toggleWrap: {
         marginTop: "15px"
@@ -11,18 +13,75 @@ const styles = {
 };
 
 export default function AuthForm(props) {
+    const [formData, setFormData] = useState({
+        username: "",
+        email: "",
+        password: "",
+        isLogin: true
+    });
+
+    const handleInputChange = e => {
+        const prop = e.target.name;
+        const value = e.target.value;
+
+        if (prop === "isLogin") {
+            return setFormData({
+                ...formData,
+                isLogin: value === "login" ? true : false
+            })
+        }
+
+        setFormData({
+            ...formData,
+            [prop]: value
+        });
+    };
+
+    const handleSubmit = e => {
+
+    };
+
     return (
         <>
-            <h1 className="text-center">Log In</h1>
-            <form className="column">
-                <input type="email" placeholder="Enter your email" />
-                <input type="password" placeholder="Enter your password" />
+            <h1 className="text-center">{formData.isLogin ? "Log In" : "Register"}</h1>
+            <form onSubmit={handleSubmit} className="column">
+                {!formData.isLogin && (
+                    <input
+                        onChange={handleInputChange}
+                        name="username"
+                        type="text"
+                        placeholder="Enter your username" />
+                )}
+                <input
+                    onChange={handleInputChange}
+                    name="email"
+                    type="email"
+                    placeholder="Enter your email" />
+                <input
+                    onChange={handleInputChange}
+                    name="password"
+                    type="password"
+                    placeholder="Enter your password" />
                 <button>Submit</button>
-                <div className="toggle-wrap row justify-center" style={styles.toggleWrap}>
+                <div className="toggle-wrap row justify-center align-center" style={styles.toggleWrap}>
                     <label style={styles.label} htmlFor="login">Login</label>
-                    <input style={styles.input} type="radio" id="login" value="login" checked={true} />
+                    <input
+                        name="isLogin"
+                        onChange={handleInputChange}
+                        style={styles.input}
+                        type="radio"
+                        id="login"
+                        value="login"
+                        checked={formData.isLogin} />
                     <label style={styles.label} htmlFor="register">Register</label>
-                    <input style={styles.input} type="radio" id="register" value="register" checked={false} />
+                    <input
+                        name="isLogin"
+                        onChange={handleInputChange}
+                        style={styles.input}
+                        type="radio"
+                        id="register"
+                        value="register"
+                        checked={!formData.isLogin} />
                 </div>
             </form>
         </>
