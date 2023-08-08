@@ -1,6 +1,9 @@
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
+const cookieParser = require("cookie-parser");
 const db = require("./db/connection");
+
 
 const app = express();
 const PORT = process.env.PORT || 3333;
@@ -15,6 +18,8 @@ if (is_prod) {
 }
 
 app.use(express.json());
+// Add additional cookie tools to the route request object
+app.use(cookieParser());
 
 // Load routes
 app.use("/api", api_routes);
