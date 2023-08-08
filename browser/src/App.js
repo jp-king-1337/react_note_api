@@ -7,7 +7,7 @@ import Loading from "./components/Loading";
 import AuthForm from "./pages/AuthForm";
 
 function App() {
-    const [appData, setAppData] = useState({
+    const [state, setState] = useState({
         user: null,
         notes: [],
         loading: true
@@ -24,7 +24,7 @@ function App() {
         <>
             <h1>Note App</h1>
 
-            {appData.loading && <Loading />}
+            {state.loading && <Loading />}
         </>
     );
 }
