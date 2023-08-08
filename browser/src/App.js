@@ -12,7 +12,7 @@ function App() {
 
     return (
         <>
-            <h1>MERN App</h1>
+            <h1>Note App</h1>
         </>
     );
 }
