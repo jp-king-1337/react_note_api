@@ -1,3 +1,15 @@
+const styles = {
+    toggleWrap: {
+        marginTop: "15px"
+    },
+    label: {
+        marginRight: "5px"
+    },
+    input: {
+        marginRight: "10px"
+    }
+};
+
 function AuthForm(props) {
     return (
         <>
