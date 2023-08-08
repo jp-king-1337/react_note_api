@@ -1,9 +1,10 @@
 const router = require("express").Router();
 
-router.get("/test", (req, res) => {
-    res.send({
-        message: "Test successful."
-    })
-});
+// User routes
+
+
+// Note routes
+
+
 
 module.exports = router;

@@ -21,5 +21,8 @@
     "homepage": "https://github.com/jp-king-1337/react_note_api#readme",
     "devDependencies": {
         "concurrently": "^8.2.0"
+    },
+    "dependencies": {
+        "jsonwebtoken": "^9.0.1"
     }
 }
