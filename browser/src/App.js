@@ -5,6 +5,7 @@ import Loading from "./components/Loading";
 
 // Pages
 import AuthForm from "./pages/AuthForm";
+import Header from "./components/Header";
 
 function App() {
     const [state, setState] = useState({
@@ -22,7 +23,7 @@ function App() {
 
     return (
         <>
-            <h1>Note App</h1>
+            <Header />
 
             {state.loading && <Loading />}
         </>

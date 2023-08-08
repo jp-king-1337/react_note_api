@@ -51,3 +51,22 @@ body {
     align-items: center;
     background: #fff;
 }
+
+header {
+    background: #777;
+    padding: 6px 3%;
+    color: #fff;
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+
+        &.active {
+            text-decoration: underline;
+        }
+    }
+}
