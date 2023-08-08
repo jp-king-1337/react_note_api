@@ -1,29 +1,30 @@
 import { useEffect, useState } from "react";
 
-// Components
+// components
 import Loading from "./components/Loading";
-
-// Pages
-import AuthForm from "./pages/AuthForm";
 import Header from "./components/Header";
+
+// pages
+import AuthForm from "./pages/AuthForm";
 
 function App() {
     const [state, setState] = useState({
         user: null,
         notes: [],
-        loading: true
+        loading: false
     });
+
     // useEffect(() => {
-    //     fetch("/api/test")
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //         })
+    //   fetch("/api/test")
+    //     .then(res => res.json())
+    //     .then(data => {
+    //       console.log(data);
+    //     })
     // }, []);
 
     return (
         <>
-            <Header />
+            <Header state={state}/>
 
             {state.loading && <Loading />}
         </>

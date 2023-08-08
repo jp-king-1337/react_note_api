@@ -7,8 +7,11 @@ export default function Header(props) {
 
             <nav>
                 <NavLink to="/">Home</NavLink>
-                <NavLink to="/dashboard">Dashboard</NavLink>
-                <NavLink to="/auth">Login / Register</NavLink>
+                {props.state.user ? (
+                    <NavLink to="/dashboard">Dashboard</NavLink>
+                ) : (
+                    <NavLink to="/auth">Login / Register</NavLink>
+                )}
             </nav>
         </header>
     )
