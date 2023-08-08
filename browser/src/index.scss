@@ -17,6 +17,28 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+// Global Classes
+.row,
+.column {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
 .loading {
     position: absolute;
     top: 0;
