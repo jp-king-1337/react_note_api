@@ -3,7 +3,7 @@ const styles = {
         marginTop: "15px"
     },
     label: {
-        marginRight: "5px"
+        marginRight: "3px"
     },
     input: {
         marginRight: "10px"
@@ -20,9 +20,9 @@ function AuthForm(props) {
                 <button>Submit</button>
                 <div className="toggle-wrap" styles={styles.toggleWrap}>
                     <label style={styles.label} htmlFor="login">Login</label>
-                    <input type="radio" id="login" value="login" checked={true} />
+                    <input style={styles.input} type="radio" id="login" value="login" checked={true} />
                     <label style={styles.label} htmlFor="register">Register</label>
-                    <input type="radio" id="register" value="register" checked={false} />
+                    <input style={styles.input} type="radio" id="register" value="register" checked={false} />
                 </div>
             </form>
         </>
