@@ -1,4 +1,4 @@
-import { Note } from "./model/Note";
-import { User } from "./model/User";
+const Note = require("./Note");
+const User = require("./User");
 
-export { Note, User };
+module.exports = { Note, User };

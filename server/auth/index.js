@@ -1,14 +1,14 @@
 async function createToken() {
     const token = await jwt.sign({
         user_id
-    }, process.env.JWT_SECRET, { expiresIn: "30s" });
+    }, process.env.JWT_SECRET, { expiresIn: "1m" });
 
     return token;
 }
 
 async function validateToken(token) {
     const is_valid = await jwt.verify(token, process.env.JWT_SECRET, {
-        maxAge: "30s"
+        maxAge: "1m"
     });
 
     return is_valid;
