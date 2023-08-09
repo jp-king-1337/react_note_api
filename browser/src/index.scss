@@ -3,12 +3,6 @@
     padding: 0;
 }
 
-html,
-body,
-#root {
-    height: 100%;
-}
-
 // https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff
 :root {
     --custBlack: #000;
@@ -16,6 +10,12 @@ body,
     --custOrange: #fca311;
     --custLightGray: #e5e5e5;
     --custWhite: #fff;
+}
+
+html,
+body,
+#root {
+    height: 100%;
 }
 
 body {
@@ -96,6 +96,7 @@ main {
 }
 
 .landing {
+    margin-bottom: 100px;
 
     h1,
     h3 {
@@ -140,6 +141,7 @@ form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    margin-bottom: 100px;
 
     .note {
         padding: 10px;

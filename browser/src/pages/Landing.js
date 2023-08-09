@@ -7,6 +7,7 @@ export default function Landing(props) {
     useEffect(() => {
         axios.get("/api/notes")
             .then(res => {
+                console.log(res.data);
                 setNotes([...res.data.notes]);
             });
     }, []);

@@ -7,7 +7,8 @@ const noteSchema = new Schema({
     },
     author: {
         type: Types.ObjectId,
-        ref: "User"
+        ref: "User",
+        required: true
     }
 }, {
     timestamps: true
