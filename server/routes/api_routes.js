@@ -14,6 +14,7 @@ async function isAuthenticated(req, res, next) {
         const user = await User.findById(data.user_id);
 
         req.user = user;
+        
         next();
     }
     catch (err) {

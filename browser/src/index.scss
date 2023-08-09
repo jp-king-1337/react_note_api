@@ -106,7 +106,14 @@ main {
 form {
     width: 400px;
     margin: 20px auto 0;
-    
+
+    &.dashboard-form {
+        margin-bottom: 25px;
+
+        h2 {
+            margin-bottom: 15px;
+        }
+    }
 
     p.error-message {
         text-align: center;

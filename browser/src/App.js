@@ -30,7 +30,7 @@ export default function App() {
                     loading: false
                 });
             });
-    }, []);
+    }, [state]);
 
     return (
         <>
