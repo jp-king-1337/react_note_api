@@ -2,7 +2,7 @@ import { Navigate, useLocation } from "react-router-dom";
 
 export default function Redirect(props) {
     const location = useLocation();
-
+    
     if (!props.user && location.pathname === "/dashboard")
         return <Navigate to="/auth" state={{ from: location }} replace />;
 

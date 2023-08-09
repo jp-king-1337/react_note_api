@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const styles = {
@@ -21,6 +22,7 @@ export default function AuthForm(props) {
         isLogin: true
     });
     const [errorMessage, setErrorMessage] = useState("");
+    const navigate = useNavigate();
 
     const handleInputChange = e => {
         const prop = e.target.name;
@@ -60,6 +62,8 @@ export default function AuthForm(props) {
                 password: "",
                 isLogin: true
             });
+
+            navigate("/dashboard");
         } catch (err) {
             setErrorMessage(err.response.data.message);
         }

@@ -49,7 +49,7 @@ router.post("/login", async (req, res) => {
 
         res.cookie("token", token, { httpOnly: true });
 
-        res.send(user);
+        res.send({ user });
     }
     catch (err) {
         console.log(err);
