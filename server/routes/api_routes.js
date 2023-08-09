@@ -3,7 +3,28 @@ const { createToken, validateToken } = require("../auth");
 
 const { Note, User } = require("../models");
 
-// User routes
+async function isAuthenticated(req, res, nect) {
+    try {
+        const token = req.cookies.token;
+
+        if (!token) throw new Error("You are not authorized to perform that action.");
+
+        const data = await validateToken(token);
+
+        const user = await User.findById(data.user_id);
+
+        req.user = user;
+        next();
+    }
+    catch (err) {
+        return res.status(401).send({
+            error: true,
+            message: err.message
+        });
+    }
+}
+
+/*** User Routes ***/
 // Register user
 router.post("/register", async (req, res) => {
     try {
@@ -87,8 +108,10 @@ router.get("/logout", (req, res) => {
 });
 
 
-// Note routes
-
-
+/*** Note Routes ***/
+// Create a note
+router.post("/note", isAuthenticated, (req, res) => {
+    console.log(req.user);
+});
 
 module.exports = router;
