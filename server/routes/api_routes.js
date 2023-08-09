@@ -44,6 +44,7 @@ router.post("/login", async (req, res) => {
 
         if (!valid_pass) throw new Error("Password is incorrect.");
 
+        // User is verified
         const token = await createToken(user._id);
 
         res.cookie("token", token, { httpOnly: true });

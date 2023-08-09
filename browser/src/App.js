@@ -17,7 +17,7 @@ export default function App() {
     const [state, setState] = useState({
         user: null,
         notes: [],
-        loading: false
+        loading: true
     });
 
     useEffect(() => {

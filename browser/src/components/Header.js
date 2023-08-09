@@ -20,7 +20,7 @@ export default function Header(props) {
             <h3>Note App</h3>
 
             <nav className="row">
-                {props.state.user && <p className="header-username">Welcome, {props.state.user.username}</p>}
+                {props.state.user && <p className="header-username">Welcome, {props.state.user.username}!</p>}
                 <NavLink to="/">Home</NavLink>
                 {props.state.user ? (
                     <>
