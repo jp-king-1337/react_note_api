@@ -19,7 +19,7 @@ router.post("/register", async (req, res) => {
         });
 
         res.send({
-            user: null
+            user
         });
     }
     catch (err) {
@@ -73,11 +73,9 @@ router.get("/authenticated", async (req, res) => {
         res.send({ user });
     }
     catch (err) {
-        res.status(401).send({
-            error: true,
-            message: err.message,
+        res.send({
             user: null
-        })
+        });
     }
 });
 
