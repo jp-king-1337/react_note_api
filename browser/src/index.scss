@@ -62,25 +62,31 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background: var(--custWhite);
 }
 
 header {
-    background: #777;
+    background: var(--custLightGray);
     padding: 6px 3%;
-    color: #fff;
+    color: var(var(--custWhite));
     margin-bottom: 35px;
 
-    nav a {
-        color: #fff;
-        text-decoration: none;
-
-        &:not(:last-child) {
-            margin-right: 5px;
+    nav {
+        p.header-username {
+            margin-right: 15px;
         }
 
-        &.active {
-            text-decoration: underline;
+        a {
+            color: var(--custWhite);
+            text-decoration: none;
+
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+
+            &.active {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -101,6 +107,12 @@ form {
     width: 400px;
     margin: 20px auto 0;
 
+    p.error-message {
+        text-align: center;
+        margin-bottom: 10px;
+        color: red;
+    }
+
     input,
     button {
         padding: 5px 10px;
@@ -112,6 +124,6 @@ form {
         padding: 8px 10px;
         font-size: .98rem;
         background: var(--custOrange);
-        color: var(--custWhite);
+        color: var(var(--custWhite));
     }
 }
