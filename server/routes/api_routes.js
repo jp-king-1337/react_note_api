@@ -19,7 +19,7 @@ router.post("/register", async (req, res) => {
         });
 
         res.send({
-            user
+            user: null
         });
     }
     catch (err) {
