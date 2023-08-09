@@ -26,8 +26,9 @@ export default function App() {
             .then(res => {
                 setState({
                     ...state,
-                    user: res.data.user
-                })
+                    user: res.data.user,
+                    loading: false
+                });
             });
     }, []);
 

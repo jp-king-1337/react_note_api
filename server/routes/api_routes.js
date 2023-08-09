@@ -81,6 +81,12 @@ router.get("/authenticated", async (req, res) => {
     }
 });
 
+// Log out user
+router.get("/logout", (req, res) => {
+    res.clearCookie("token");
+    res.send("Logged out successfully.");
+});
+
 
 // Note routes
 
