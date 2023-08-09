@@ -106,6 +106,7 @@ main {
 form {
     width: 400px;
     margin: 20px auto 0;
+    
 
     p.error-message {
         text-align: center;
@@ -125,5 +126,20 @@ form {
         font-size: .98rem;
         background: var(--custOrange);
         color: var(var(--custWhite));
+    }
+}
+
+.notes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    .note {
+        padding: 10px;
+        border: 1px solid #333;
+
+        p {
+            margin: 4px 0;
+        }
     }
 }
